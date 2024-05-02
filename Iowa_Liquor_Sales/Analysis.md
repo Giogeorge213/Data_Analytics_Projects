@@ -50,16 +50,24 @@ I plotted the top 5 AMERICAN VODKAS by their item_description and found that SMI
 
 <img width="468" alt="Picture2" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/a459b1ae-3456-41c1-8158-71b48bf2e552">
 
+At this point I realized all the liquors if sold in plastic bottles would have a separate item_description so total sales would be different when compared to a brand that doesn’t sell in plastic bottles like Tito’s. I decided to focus my analysis on top 5 vodkas and aggregate their data into one item_description each not counting the mini sizes and 100 proofs. I kept the category_name the same because this might be interesting to explore later on. 
 
+I took a snapshot of my database then proceeded to update. I needed to aggregate the top 5 Vodkas together to compared them accurately. Did these for HAWKEYE VODKA, BARTON VODKA, and FIVE O’CLOCK VODKA.  Titos isn’t sold in a plastic bottle but it was in the database as TITO VODKA without “HANDMADE” I decide to aggregate the two into just TITOS HANDMADE VODKA.
 
+<img width="363" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/3ad06c88-83d9-4561-b77d-15ca852879ff">
 
+<img width="363" alt="Picture2" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/c530a536-5f1b-4656-837a-30f7e443832d">
 
-
-
-
+The next viz are taking a deeper look into Titos and AMERICAN VODKAS by sales count dynamic:
 
 <img width="880" alt="Screenshot 2024-05-01 at 8 15 26 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/cfe2ac8d-e4fe-4cf2-93ca-bd936f7447ca">
 
+Top Stores Total Sales:
+
 <img width="880" alt="Screenshot 2024-05-01 at 8 15 18 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/9137710d-539c-42b7-8690-3769956fa82e">
 
+Top Vodkas Total Sales 2012-2023 and After the got rebranded to AMERICAN VODKAS 2017-2023
+
 <img width="880" alt="Screenshot 2024-05-01 at 8 31 25 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/18adcc1e-951d-4482-813a-a708e20165c5">
+
+### I am working to finish this project please come back soon to see my analysis. I plan on using my Data Science skills from ASU to scrape a weather website with Selenium and get daily weather statistics for Des Moines the top total alcohol sales city in Iowa. I will use this data to see if there is a relationship between total sales, sales counts and the weather.
