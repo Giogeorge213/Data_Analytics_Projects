@@ -16,15 +16,26 @@ This is also why I couldn't extract my data viz to public and link. You can do t
 First I wanted to see nulls
 
 <img width="880" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/57352179-a601-42b3-b64d-18dd5c717e84">
-The way I approached these was to just leave them be. The most significant amount of nulls was store location 2.5mil which is the latitude and longitude. I ended up inputting these for top 20 cities in total sales in Tableau when my map viz wouldnt populate. 
 
-My first viz is dynamic - you can click on rows of data on the tables and it will select the corresponding data in the other tables. Also i left out the legend for the map because when you hover over the bubbles the sales # populate:
+The way I approached these was to just leave them be. The most significant amount of nulls is store location 2.5mil which is the latitude and longitude. I ended up inputting these for top 20 cities in total sales in Tableau when my map viz wouldnt populate. 
 
 <img width="880" alt="Screenshot 2024-05-01 at 8 14 45 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/ccd978a0-1825-4bcb-9070-a708dbb8591e">
 
-At this point I wasn't sure yet what I was interested in. I did make the data viz together with exploring the data because I wanted to practice Tableau. I tried to graph some more general big picture data and found the second graph on this viz interesting. AMERICAN VODKAS doesnt show any sales before 2016:
+-CANADIAN WHISKEY is the top category in total sales from 2012-2023 followed closely by AMERICAN VODKAS 
+
+-DES MOINES is the top city in total sales with CEDAR RAPIDS a distant second with almost half has many
+
+My first viz is dynamic - you can click on rows of data on the tables and it will select the corresponding data in the other tables. Also i left out the legend for the map because when you hover over the bubbles the sales # populate.
+
+
+At this point I wasn't sure yet what I was interested in. I did make the data viz together with exploring the data because I wanted to practice Tableau and my SQL queries at the same time. 
 
 <img width="880" alt="Screenshot 2024-05-01 at 8 15 08 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/5f23482c-8b32-4528-bad6-51da756c8de4">
+
+-Total liquor sales seems to show a pattern of seasonality with peaks coming in October and December and valleys in January and February
+
+-There are no AMERICAN VODKAS sales before 2016
+
 
 I queried the database to confirm what I saw on Tableau:
 
