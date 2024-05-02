@@ -1,8 +1,9 @@
 # Iowa Liquor Sales BigQuery Google open database
-### See the .sql for my queries
+#### A walkthrough of how I am practicing data analysis
+#### See the .sql for my queries
 
 ## Introduction
-I wanted to analyze a large dataset in a database and GCP has a $300 credit and 90 day free trial so I chose the Iowa Liquor Sales database on BigQuery. It's a daily updated database starting from sales in 2012, but I didn't use data from this year. I copied the data to my project and used the PREVIEW button to view the first 50 rows. The database has almost 29 million rows. 
+I wanted to analyze a large dataset in a database and GCP has a $300 credit and 90 day free trial so I chose the Iowa Liquor Sales database on BigQuery. It's a daily updated database starting from sales in 2012, but I didn't use data from this year. I plan on using it later to test models on as the data comes out. I copied the data to my project and used the PREVIEW button to view the first 50 rows. The database has almost 29 million rows. 
 
 ![Picture1](https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/ca5bd2f2-8b90-4c4a-b72d-00aebfaa1849)
 
@@ -10,17 +11,13 @@ I wanted to analyze a large dataset in a database and GCP has a $300 credit and 
 
 This is also why I couldn't extract my data viz to public and link. You can do this with Tableau cloud but I don't want to pay for it so I just screenshot my data viz.
 
-## Data Updating/ Explore
+## Explore
 
 First I wanted to see nulls
 
 <img width="880" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/57352179-a601-42b3-b64d-18dd5c717e84">
 
-I updated rows in the database that were incorrectly labeled. Delete a couple entries showing in Colorado and fixed the coordinates for a store that was in Minnesota. I discovered these data when I made my map data viz and the city with the most sales was not showing up.
-
-<img width="385" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/1f83eb33-e46f-47c0-bcce-d2d445a8088c">
-
-I edited the coordinates through Tableau for the top 20 cities by sum of sales. My first viz is dynamic - you can click on rows of data on the tables and it will select the corresponding data in the other tables. Also i left out the legend for the map because when you hover over the bubbles the sales # populate:
+My first viz is dynamic - you can click on rows of data on the tables and it will select the corresponding data in the other tables. Also i left out the legend for the map because when you hover over the bubbles the sales # populate:
 
 <img width="880" alt="Screenshot 2024-05-01 at 8 14 45 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/ccd978a0-1825-4bcb-9070-a708dbb8591e">
 
@@ -36,12 +33,26 @@ This was interesting because AMERICAN VODKAS is #2 all time in total sales but i
 
 <img width="702" alt="Screenshot 2024-05-01 at 9 21 10 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/9dabc1c2-2f8d-4c65-8df3-871125fb9916">
 
-## AMERICAN VODKAS as the focus of this analysis
+## Updating / AMERICAN VODKAS focus
 
 The category_name was VODKA 80 PROOF before 2016. In 2016 the database lists these vodkas as a mix of AMERICAN VODKAS and VODKA 80 PROOF thats why the previous chart shows the AMERICAN VODKAS line with such few sales. In 2017 the rebranded ones were all full changed and you can see that from the graph where there is a steep increase between 2016 and 2017. I queried the top 5 AMERICAN VODKAS by sales and decided that I wanted to concentrate my analysis on this segment of the data. 
 
 
 <img width="468" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/e0b5cefc-7138-4ce0-b2a7-2912e2ee4a24">
+
+I updated rows in the database that were incorrectly labeled. Delete a couple entries showing in Colorado and fixed the coordinates for a store that was in Minnesota. I discovered these data when I made my map data viz and the city with the most sales was not showing up.
+
+<img width="385" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/1f83eb33-e46f-47c0-bcce-d2d445a8088c">
+
+I plotted the top 5 AMERICAN VODKAS by their item_description and found that SMIRNOFF 80PRF didn’t have data before 2016. Queried total Smirnoff% sales and found that the names of the bottles were different for plastic and regular and before 2016. Used the same approach to analyze the other top vodkas and found that they all were separated by PET also
+
+<img width="468" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/2d53fc05-f4de-4077-a3f5-aa1842a8e377">
+
+<img width="468" alt="Picture2" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/a459b1ae-3456-41c1-8158-71b48bf2e552">
+
+
+
+
 
 
 
