@@ -16,6 +16,7 @@ This is also why I couldn't extract my data viz to public and link. You can do t
 First I wanted to see nulls
 
 <img width="880" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/57352179-a601-42b3-b64d-18dd5c717e84">
+The way I approached these was to just leave them be. The most significant amount of nulls was store location 2.5mil which is the latitude and longitude. I ended up inputting these for top 20 cities in total sales in Tableau when my map viz wouldnt populate. 
 
 My first viz is dynamic - you can click on rows of data on the tables and it will select the corresponding data in the other tables. Also i left out the legend for the map because when you hover over the bubbles the sales # populate:
 
