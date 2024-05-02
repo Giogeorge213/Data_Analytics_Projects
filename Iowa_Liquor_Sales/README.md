@@ -34,7 +34,7 @@ At this point I wasn't sure yet what I was interested in. I did make the data vi
 
 -Total liquor sales seems to show a pattern of seasonality with peaks coming in October and December and valleys in January and February
 
--There are no AMERICAN VODKAS sales before 2016
+-There are no AMERICAN VODKAS sales before 2016 but its the highest selling category 2017-2023
 
 
 I queried the database to confirm what I saw on Tableau:
