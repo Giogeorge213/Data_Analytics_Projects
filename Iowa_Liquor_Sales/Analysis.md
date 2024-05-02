@@ -2,14 +2,23 @@
 ### See the .sql for my queries
 
 ## Introduction
-I wanted to use a large dataset in a database and GCP has a $300 credit and 90 day free trial so I chose the Iowa Liquor Sales database on BigQuery. It has almost 29 million rows. 
-![Picture1](https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/7d51709a-19c0-4935-8adf-c26896314270)
+I wanted to analyze a large dataset in a database and GCP has a $300 credit and 90 day free trial so I chose the Iowa Liquor Sales database on BigQuery. It's a daily updated database, but I didn't use data from this year. Used the PREVIEW button to view the first 50 rows. The database has almost 29 million rows. 
+
+![Picture1](https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/ca5bd2f2-8b90-4c4a-b72d-00aebfaa1849)
 
 
 
-This is also why I couldn't extract my viz to public and link. You can do this with Tableau cloud but I don't want to pay for it so I just screenshot my Data Viz. 
+This is also why I couldn't extract my data viz to public and link. You can do this with Tableau cloud but I don't want to pay for it so I just screenshot my data viz.
 
+## Data Updating
 
+First I wanted to see nulls
+
+<img width="880" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/57352179-a601-42b3-b64d-18dd5c717e84">
+
+I updated rows in the database that were incorrectly labeled. Delete a couple entries showing in Colorado and fixed the coordinates for a store that was in Minnesota. I discovered these data when I made my map data viz and the city with the most sales was not showing up. 
+
+<img width="385" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/1f83eb33-e46f-47c0-bcce-d2d445a8088c">
 
 
 
