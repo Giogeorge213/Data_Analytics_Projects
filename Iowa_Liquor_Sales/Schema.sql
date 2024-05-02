@@ -1,3 +1,4 @@
+## THE Schema
 CREATE TABLE your_table_name (
     store_location GEOGRAPHY,
     county_number STRING,
@@ -17,3 +18,5 @@ CREATE TABLE your_table_name (
     volume_sold_liters FLOAT,
     volume_sold_gallons FLOAT
 );
+
+
