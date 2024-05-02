@@ -35,16 +35,16 @@ This was interesting because AMERICAN VODKAS is #2 all time in total sales but i
 
 ## Updating / AMERICAN VODKAS focus
 
-The category_name was VODKA 80 PROOF before 2016. In 2016 the database lists these vodkas as a mix of AMERICAN VODKAS and VODKA 80 PROOF thats why the previous chart shows the AMERICAN VODKAS line with such few sales. In 2017 the rebranded ones were all full changed and you can see that from the graph where there is a steep increase between 2016 and 2017. I queried the top 5 AMERICAN VODKAS by sales and decided that I wanted to concentrate my analysis on this segment of the data. 
+The category_name was VODKA 80 PROOF before 2016. In 2016 the database lists these vodkas as a mix of AMERICAN VODKAS and VODKA 80 PROOF thats why the previous chart shows the AMERICAN VODKAS line with such few sales. In 2017 the rebranded ones were all full changed and you can see that from the previous sales graph where there is a steep increase between 2016 and 2017. I queried the top 5 AMERICAN VODKAS by sales and decided that I wanted to concentrate my analysis on this segment of the data. 
 
 
 <img width="468" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/e0b5cefc-7138-4ce0-b2a7-2912e2ee4a24">
 
-I updated rows in the database that were incorrectly labeled. Delete a couple entries showing in Colorado and fixed the coordinates for a store that was in Minnesota. I discovered these data when I made my map data viz and the city with the most sales was not showing up.
+I updated rows in the database that were incorrectly labeled. I Delete a couple entries showing in Colorado and fixed the coordinates for a store that was in Minnesota. I discovered these data when I made my map viz and bubble for the city with the most sales Des Moines was not showing up.
 
 <img width="385" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/1f83eb33-e46f-47c0-bcce-d2d445a8088c">
 
-I plotted the top 5 AMERICAN VODKAS by their item_description and found that SMIRNOFF 80PRF didn’t have data before 2016. Queried total Smirnoff% sales and found that the names of the bottles were different for plastic and regular and before 2016. Used the same approach to analyze the other top vodkas and found that they all were separated by PET also
+I plotted the top 5 AMERICAN VODKAS by their item_description and found that SMIRNOFF 80PRF didn’t have data before 2016. Queried total 'Smirnoff%' sales and found that the names of the bottles were different for plastic and regular and before 2016. Used the same approach to analyze the other top vodkas and found that they all were separated by PET also
 
 <img width="468" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/2d53fc05-f4de-4077-a3f5-aa1842a8e377">
 
@@ -52,7 +52,7 @@ I plotted the top 5 AMERICAN VODKAS by their item_description and found that SMI
 
 At this point I realized all the liquors if sold in plastic bottles would have a separate item_description so total sales would be different when compared to a brand that doesn’t sell in plastic bottles like Tito’s. I decided to focus my analysis on top 5 vodkas and aggregate their data into one item_description each not counting the mini sizes and 100 proofs. I kept the category_name the same because this might be interesting to explore later on. 
 
-I took a snapshot of my database then proceeded to update. I needed to aggregate the top 5 Vodkas together to compared them accurately. Did these for HAWKEYE VODKA, BARTON VODKA, and FIVE O’CLOCK VODKA.  Titos isn’t sold in a plastic bottle but it was in the database as TITO VODKA without “HANDMADE” I decide to aggregate the two into just TITOS HANDMADE VODKA.
+I took a snapshot of my database then proceeded to update. I needed to aggregate the top 5 Vodkas together to compared them accurately. Did this for SMIRNOFF 80 PRF, HAWKEYE VODKA, BARTON VODKA, and FIVE O’CLOCK VODKA.  Titos isn’t sold in a plastic bottle but it was in the database as TITO VODKA without “HANDMADE” I decide to aggregate the two into just TITOS HANDMADE VODKA.
 
 <img width="363" alt="Picture1" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/3ad06c88-83d9-4561-b77d-15ca852879ff">
 
@@ -66,7 +66,7 @@ Top Stores Total Sales:
 
 <img width="880" alt="Screenshot 2024-05-01 at 8 15 18 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/9137710d-539c-42b7-8690-3769956fa82e">
 
-Top Vodkas Total Sales 2012-2023 and After the got rebranded to AMERICAN VODKAS 2017-2023
+Top Vodkas Total Sales 2012-2023 and after they got rebranded to AMERICAN VODKAS 2017-2023
 
 <img width="880" alt="Screenshot 2024-05-01 at 8 31 25 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/18adcc1e-951d-4482-813a-a708e20165c5">
 
