@@ -37,6 +37,17 @@ After making a few queries I discovered that various vodkas were renamed startin
 
 <img width="468" alt="image" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/f8e7d9e7-abe1-4cd0-a517-6c5fb2e28864">
 
+Queried the top selling AMERICAN VODKAS and discovered they are named differently if in plastic bottles 
+
+<img width="387" alt="image" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/b0b91924-52b2-4260-80e9-5c6ac0a57269">
+
+At this point, I decided to make the focus of my analysis AMERICAN VODKAS. I wanted to compare the top 5 AMERICAN VODKAS by total sales. In order to do this I -- 
+1. Created a separate table with just the AMERICAN VODKAS I was interested in
+2. Use a stored procedure to add each AMERICAN VODKAS after making the initial table
+3. Cleaned and prepped the table by combining PET variants into single brand fields dropped the mini varients
+
+
+
 
   
 
