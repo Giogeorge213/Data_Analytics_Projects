@@ -66,63 +66,70 @@ WHERE item_description LIKE 'TITOS%'
 GROUP BY item_description,category_name,year
 ORDER BY year
 
-## 2016 various vodkas had a renamed item_description field the one with highest sales being Tito’s as AMERICAN VODKAS.
-SELECT category_name,item_description,EXTRACT(YEAR FROM date) AS year, SUM(sale_dollars) AS sales
-FROM `blissful-sled-420621.Iowa_Liquor_Sales.sales`
+## Queried to see the top total sales of AMERICAN VODKAS
+
+SELECT SUM(sale_dollars) as sales,item_description
+FROM `blissful-sled-420621.Iowa_Liquor_Sales.sales` 
 WHERE category_name = 'AMERICAN VODKAS'
-AND EXTRACT(YEAR FROM date) = 2016
-GROUP BY category_name, year, item_description
+GROUP BY item_description
 ORDER BY sales DESC
+LIMIT 10
 
-## I plotted the top 5 AMERICAN VODKAS by their item_description and found that SMIRNOFF 80PRF didn’t have data before 2016. 
-##Queried total Smirnoff% sales and found that the names of the bottles were different for plastic and regular and before 2016. 
-## Used the same approach to analyze the other top vodkas and found that they all were separated by PET also
+## Created a stored procedure to add the vodkas I wanted to to the separate table I created to analyze AMERICAN VODKAS
 
-SELECT  item_description, category_name,  SUM(sale_dollars) as sales
-FROM `blissful-sled-420621.Iowa_Liquor_Sales.sales`
-WHERE item_description LIKE 'SMIRNOFF%' 
-GROUP BY category_name, item_description
-ORDER BY sales DESC
+BEGIN
+    INSERT INTO `blissful-sled-420621.Iowa_Liquor_Sales.american_vodkas`
+    SELECT
+        invoice_and_item_number,
+        date,
+        store_number,
+        store_name,
+        address,
+        city,
+        zip_code,
+        store_location,
+        county_number,
+        county,
+        category,
+        category_name,
+        vendor_number,
+        vendor_name,
+        item_number,
+        item_description,
+        pack,
+        bottle_volume_ml,
+        state_bottle_cost,
+        state_bottle_retail,
+        bottles_sold,
+        sale_dollars,
+        volume_sold_liters,
+        volume_sold_gallons
+    FROM 
+        `blissful-sled-420621.Iowa_Liquor_Sales.sales`
+    WHERE 
+        item_description LIKE CONCAT(brand_name, '%');
+END
 
-## I took a snapshot of my database then proceeded to update. I needed to aggregate the top 5 Vodkas together to compared them 
-## accurately. Did these for HAWKEYE VODKA, BARTON VODKA, and FIVE O’CLOCK VODKA.  Titos isn’t sold in a plastic bottle but it was
-## in the database as TITO VODKA without “HANDMADE” I decide to aggregate the two into just TITOS HANDMADE VODKA.
+CALL `blissful-sled-420621.Iowa_Liquor_Sales.append`("BARTON VODKA") 
+CALL `blissful-sled-420621.Iowa_Liquor_Sales.append`("HAWKEYE VODKA") 
+CALL `blissful-sled-420621.Iowa_Liquor_Sales.append`("FIVE O’CLOCK VODKA") 
+CALL `blissful-sled-420621.Iowa_Liquor_Sales.append`("TITOS") 
 
-UPDATE `blissful-sled-420621.Iowa_Liquor_Sales.sales`
-SET item_description = 'SMIRNOFF 80PRF'
-WHERE item_description IN (
-    'SMIRNOFF VODKA 80 PRF',
-    'VODKA 80 PROOF',
-    'SMIRNOFF 80PRF PET',
-    'AMERICAN VODKAS',
-    'SMIRNOFF VODKA 80 PRF PET',
-    'VODKA 80 PROOF',
-    'SMIRNOFF PET 80PRF')
+## Dropped mini versions for each vodka and combined PET versions into one field for analysis
 
-UPDATE `blissful-sled-420621.Iowa_Liquor_Sales.sales`
-SET item_description = "TITOS HANDMADE VODKA"
-WHERE item_description = "TITOS VODKA"
+DELETE
+FROM `blissful-sled-420621.Iowa_Liquor_Sales.american_vodkas` 
+WHERE item_description LIKE '%MINI%';
 
-## I wanted to see how the top 5 AMERICAN VODKAS were classified in 2016 and 2017. 2017 they were all fully classified as 
-## AMERICAN VODKAS instead of VODKA 80PRF
+UPDATE `blissful-sled-420621.Iowa_Liquor_Sales.american_vodkas`
+SET item_description = "FIVE O'CLOCK VODKA"
+WHERE item_description LIKE "FIVE O'CLOCK VODKA%"
 
 
-SELECT item_description, category_name,  COUNT(item_number) as num_orders
-FROM `blissful-sled-420621.Iowa_Liquor_Sales.sales`
-WHERE (item_description = 'TITOS HANDMADE VODKA' OR item_description = 'HAWKEYE VODKA' 
-OR item_description = 'SMIRNOFF 80PRF' OR item_description = "FIVE O'CLOCK VODKA" OR
-item_description = 'BARTON VODKA' )
-AND EXTRACT(YEAR FROM date) = 2016
-GROUP BY category_name, item_description
-ORDER BY item_description
 
-SELECT item_description, category_name,  COUNT(item_number) as num_orders
-FROM `blissful-sled-420621.Iowa_Liquor_Sales.sales`
-WHERE (item_description = 'TITOS HANDMADE VODKA' OR item_description = 'HAWKEYE VODKA' 
-OR item_description = 'SMIRNOFF 80PRF' OR item_description = "FIVE O'CLOCK VODKA" OR
-item_description = 'BARTON VODKA' )
-AND EXTRACT(YEAR FROM date) = 2017
-GROUP BY category_name, item_description
-ORDER BY item_description
+
+
+
+
 
 
