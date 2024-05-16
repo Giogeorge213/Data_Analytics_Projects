@@ -16,14 +16,16 @@ First I wanted to see nulls
 
 The way I approached these was to just leave them be. The most significant amount of nulls is store location 2.5mil which is the latitude and longitude. I ended up inputting these for top 20 cities in total sales in Tableau when my map viz wouldnt populate. 
 
-<img width="994" alt="Screenshot 2024-05-14 at 3 25 26 PM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/4ff59dc9-ec89-4851-ad78-10789c1fa56e">
+<img width="1001" alt="Screenshot 2024-05-16 at 11 43 21 AM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/b5e0768f-a5b5-489a-b050-556152a49515">
 
 
 -CANADIAN WHISKEY is the top category in total sales from 2012-2023 followed closely by AMERICAN VODKAS 
 
 -DES MOINES is the top city in total sales with CEDAR RAPIDS a distant second with almost half has many
 
-At this point I wasn't sure yet what I was interested in. I did make the data viz together with exploring the data because I wanted to practice Tableau and my SQL queries at the same time. 
+-DES MOINES has almost double the sales of AMERICAN VODKAS compared to the next closest city
+
+At this point I wasn't sure yet what I was interested in. I did make the data viz together with exploring the data because I wanted to practice Tableau and my SQL queries at the same time
 
 
 
