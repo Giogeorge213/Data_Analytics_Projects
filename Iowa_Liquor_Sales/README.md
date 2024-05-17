@@ -1,4 +1,4 @@
-<img width="1001" alt="Screenshot 2024-05-16 at 11 43 21 AM" src="https://github.com/Giogeorge213/Data_Analytics_Projects/assets/98611938/e8a8f34b-0805-42fb-85b7-7004f42969d3"># Iowa Liquor Sales BigQuery Google open database
+
 #### A walkthrough of how I am practicing data analysis
 #### See the .sql for my queries
 
